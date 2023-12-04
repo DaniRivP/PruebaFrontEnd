@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRITT FACTURAS PRUEBA</title>
+</head>
+<body>
+
+
+  <div class="container ">
+    <h1 class=>BRITT FACTURAS PRUEBA</h1>
+
+    <form class="form-inline"> 
+    
+      <div class="d-flex justify-content-end">
+ 
+        <div class="form-group mx-2">
+          <label for="FacturaConsultar" class="mr-2">Número de Factura:</label>
+          <input type="text" class="form-control" id="FacturaConsultar" name="FacturaConsultar" placeholder="Digite número de factura">
+         
+        </div>
+      
+   
+        <button type="button" class="btn btn-info">CONSULTAR FACTURA</button>
+      </div>
+
+      <div class="form-group mx-2 mb-2">
+        <label for="factura" class="mr-2">FACTURA:</label>
+        <span class="form-control border-0" id="factura" name="factura">{{ factura.FACTURA.NUMERO_FACTURA }}</span>
+      </div>
+      <div class="form-group mx-2 mb-2">
+        <label for="fecha" class="mr-2">FECHA:</label>
+        <span class="form-control border-0" id="fecha" name="fecha">{{ factura.FACTURA.FECHA }}</span>
+      </div>
+      
+      <div class="form-group mx-2">
+        <label for="total" class="mr-2">TOTAL:</label>
+        <span class="form-control border-0" id="total" name="total">{{ factura.FACTURA.TOTAL.toFixed(2) }}</span>
+      </div>
+     
+<br>
+      <div class="d-flex justify-content-end"> 
+
+<button type="button" class="btn btn-primary" (click)="abrirModalNuevaFactura()">NUEVA FACTURA</button>
+
+
+<button type="button" class="btn btn-success" (click)="abrirModalNuevaLinea()">NUEVA LÍNEA</button>
+
+      </div>
+    </form>
+
+    <div class="grid-container">
+      <div class="grid-header">
+        <div>SKU</div>
+        <div>PRODUCTO</div>
+        <div>QTY</div>
+        <div>PRECIO</div>
+        <div>TOTAL ARTICULO</div>
+      </div>
+ 
+    </div>
+  </div>
+ 
+
+</body>
+</html>
